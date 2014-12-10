@@ -60,7 +60,7 @@ div#content {
 }
 
 .component {
-  margin: 10px 5px;
+  margin: 10px;
   font-size: 20px;
   transition: all 0.2s;
 
@@ -124,4 +124,19 @@ footer {
 
 .right-float {
   float: right;
+}
+
+.readme-anchor {
+  text-decoration: none;
+  color: $orange;
+  font-size: 20px;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:visited {
+    text-decoration: none;
+    color: $orange;
+  }
 }

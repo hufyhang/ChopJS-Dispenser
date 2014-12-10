@@ -97,7 +97,8 @@ function downloadNow(name, bundle) {
 
 
 $ch.use(['./chop-bundle'], function () {
-  // Generate version string and check CSS anchor for each package.
+  // Generate version string, check CSS anchor,
+  // and create readme link for each package.
   PACKS.forEach(function (pack) {
     var verStr = '';
     pack.versions.map(function (ver) {
@@ -109,6 +110,9 @@ $ch.use(['./chop-bundle'], function () {
     if (css.trim() !== '') {
       pack.css = '<a class="css-anchor" href="' + CDN.CSS_PREFIX + css + '" target="_blank">CSS</a>';
     }
+
+    var readme = pack.name === 'core' ? '../../..' : pack.name;
+    pack.readme = readme;
   });
 
   // Apply `PACKS` on inline template.

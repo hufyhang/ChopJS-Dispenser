@@ -45,7 +45,7 @@ div#content {
   margin-bottom: 20px; }
 
 .component {
-  margin: 10px 5px;
+  margin: 10px;
   font-size: 20px;
   transition: all 0.2s; }
   .component:nth-child(1) {
@@ -80,3 +80,13 @@ footer {
 
 .right-float {
   float: right; }
+
+.readme-anchor {
+  text-decoration: none;
+  color: #d34d1d;
+  font-size: 20px; }
+  .readme-anchor:hover {
+    text-decoration: none; }
+  .readme-anchor:visited {
+    text-decoration: none;
+    color: #d34d1d; }
