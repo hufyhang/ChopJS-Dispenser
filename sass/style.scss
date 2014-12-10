@@ -1,0 +1,115 @@
+$orange: #d34d1d;
+$darkOrange: #bb4419;
+$white: #fff;
+$grey: #bdb9ca;
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  color: $white;
+
+  z-index: 1;
+  background: $orange;
+
+  #title {
+    position: relative;
+    top: -15px;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+#download-btn {
+  position: relative;
+  margin: 20px auto;
+  text-align: center;
+  width: 150px;
+  color: $white;
+  border: 1px solid $white;
+  border-radius: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  background: $orange;
+  margin-bottom: 30px;
+  transition: background 0.2s;
+
+  &:hover {
+    background: $darkOrange;
+  }
+}
+
+div#content {
+  position: relative;
+  min-height: 100%;
+  width: 80%;
+  margin: 100px auto;
+  margin-bottom: 0px;
+
+}
+
+#components {
+  min-height: 100%;
+  margin-bottom: 20px;
+}
+
+.component {
+  margin: 10px 5px;
+  font-size: 20px;
+  transition: all 0.2s;
+
+  // &:hover {
+  //   background: $orange;
+  //   color: $white;
+  //   padding: 10px;
+
+  //   select {
+  //     color: #000;
+  //   }
+  // }
+
+  &:nth-child(1) {
+    color: $orange;
+
+    // &:hover {
+    //   background: $orange;
+    //   color: $white;
+    //   padding: 10px;
+
+    //   select {
+    //     color: #000;
+    //   }
+    // }
+
+  }
+}
+
+select {
+  background: $white;
+  float: right;
+}
+
+#tutorial {
+  width: 100%;
+  padding: 30px 60px;
+  background: $orange;
+  color: $white;
+}
+
+code {
+  display: block;
+  background: $darkOrange;
+  text-align: left;
+  padding: 20px;
+}
+
+footer {
+  margin: 20px 10px;
+  text-align: center;
+}

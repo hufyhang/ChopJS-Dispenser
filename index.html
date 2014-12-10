@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChopJS Dispenser</title>
+
+  <meta name="description" content="ChopJS package/module dispenser.">
+  <meta name="keywords" content="ChopJS,package,module,dispenser,repository">
+  <meta name="author" content="Feifei Hang">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+  <link rel="icon" href="img/icon.png">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img src="img/icon.png" height="50" width="50" alt="ChopJS Icon"><span id="title">ChopJS Dispenser</span>
+    <a href="https://github.com/hufyhang/chop" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
+  </header>
+
+  <div id="content">
+    <form id="components" ch-inline class="ch-row ch-align-center">
+
+      <div class="component ch-xs-10 ch-sm-5 ch-md-3">
+        <input id="{{name}}-check" name="{{name}}" type="checkbox" value="checked" {{attr}}>
+        <label class="name-tag" for="{{name}}-check">{{name}}</label>
+        <select name="{{name}}-ver">{{versions-str}}</select>
+      </div>
+
+    </form>
+
+    <div id="download-btn" ch-click="download();">Download</div>
+
+  </div>
+
+  <div id="tutorial">
+    <h2>How to...</h2>
+
+    <h4>Import ChopJS</h3>
+
+    <code>
+      &lt;script src="js/chopjs.js" ch-main="js/main.js"&gt;&lt;/script&gt;
+    </code>
+
+    <h4>Use Package Bundle</h4>
+
+    <code>
+      // in main.js... <br>
+      $ch.use(['./chop-bundle'], function () {<br>
+      &nbsp;&nbsp;// do something. <br>
+      });<br>
+    </code>
+
+  </div>
+
+  <footer>
+    &copy; 2014 Feifei Hang
+  </footer>
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/chopjs.js" ch-main="js/main.js"></script>
+</body>
+</html>
