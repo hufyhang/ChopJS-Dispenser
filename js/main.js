@@ -14,7 +14,8 @@ var BUNDLE_PREFIX = 'data:text/plain;charset=utf-8,';
 var CDN = {
   CORE: 'http://cdn.jsdelivr.net/chop/',
   MODULE: 'http://cdn.jsdelivr.net/chopjs-',
-  POSTFIX : '.min.js'
+  POSTFIX : '.min.js',
+  CSS_PREFIX: 'http://cdn.jsdelivr.net/'
 };
 
 // ChopJS package information.
@@ -96,13 +97,18 @@ function downloadNow(name, bundle) {
 
 
 $ch.use(['./chop-bundle'], function () {
-  // Generate version string for each package.
+  // Generate version string and check CSS anchor for each package.
   PACKS.forEach(function (pack) {
     var verStr = '';
     pack.versions.map(function (ver) {
       verStr += '<option>' + ver + '</option>';
     });
     pack['versions-str'] = verStr;
+
+    var css = pack.css;
+    if (css.trim() !== '') {
+      pack.css = '<a class="css-anchor" href="' + CDN.CSS_PREFIX + css + '" target="_blank">CSS</a>';
+    }
   });
 
   // Apply `PACKS` on inline template.

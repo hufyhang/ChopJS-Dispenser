@@ -52,8 +52,7 @@ div#content {
     color: #d34d1d; }
 
 select {
-  background: white;
-  float: right; }
+  background: white; }
 
 #tutorial {
   width: 100%;
@@ -70,3 +69,14 @@ code {
 footer {
   margin: 20px 10px;
   text-align: center; }
+
+.css-anchor {
+  color: white;
+  font-size: 10px;
+  text-decoration: none;
+  padding: 5px;
+  background: #d34d1d;
+  border-radius: 3px; }
+
+.right-float {
+  float: right; }

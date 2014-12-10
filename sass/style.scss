@@ -92,7 +92,6 @@ div#content {
 
 select {
   background: $white;
-  float: right;
 }
 
 #tutorial {
@@ -112,4 +111,17 @@ code {
 footer {
   margin: 20px 10px;
   text-align: center;
+}
+
+.css-anchor {
+  color: $white;
+  font-size: 10px;
+  text-decoration: none;
+  padding: 5px;
+  background: $orange;
+  border-radius: 3px;
+}
+
+.right-float {
+  float: right;
 }
