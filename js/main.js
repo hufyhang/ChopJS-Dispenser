@@ -42,6 +42,8 @@ function download() {
   };
   delete raw.core;
 
+  var banner;
+
   // Download ChopJS core first if `tar.core` is not `undefined`.
   var ver = tar.core;
   delete tar.core;
@@ -49,19 +51,25 @@ function download() {
     var content = $ch.http(CDN.CORE + ver + '/chop' + CDN.POSTFIX, {
       async: false
     }).responseText;
-    downloadNow(CHOPJS_NAME, content);
+    banner = '// ChopJS core (' + ver + ')\n// Downloaded: ' + new Date() + '\n';
+    downloadNow(CHOPJS_NAME, banner, content);
   }
 
+  var meta = [];
   // Map all `checked` package to `tar`.
   $ch.each(raw, function (key) {
     if (key.indexOf('-') === -1) {
       tar[key] = raw[key + '-ver'];
+
+      meta.push('// + ' + key + ' -- ' + raw[key + '-ver']);
     }
   });
 
   // Now, create bundle.
   var bundle = createBundle(tar);
-  downloadNow(BUNDLE_NAME, bundle);
+  banner = '// ChopJS Module Bundle\n// Downloaded: ' + new Date();
+  banner += '\n' + meta.join('\n') + '\n';
+  downloadNow(BUNDLE_NAME, banner, bundle);
 }
 
 // Create bundle.
@@ -82,7 +90,7 @@ function createBundle(tar) {
   return buffer.join('\n');
 }
 
-function downloadNow(name, bundle) {
+function downloadNow(name, banner, bundle) {
   // If `bundle` is empty, do nothing.
   if (bundle.trim() === '') {
     return;
@@ -90,7 +98,7 @@ function downloadNow(name, bundle) {
 
   // Create an anchor element and download it.
   var anchor = document.createElement('a');
-  anchor.setAttribute('href', BUNDLE_PREFIX + encodeURIComponent(bundle));
+  anchor.setAttribute('href', BUNDLE_PREFIX + encodeURIComponent(banner + bundle));
   anchor.setAttribute('download', name);
   anchor.click();
 }

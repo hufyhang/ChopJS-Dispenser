@@ -52,6 +52,7 @@ div#content {
     color: #d34d1d; }
 
 select {
+  display: none;
   background: white; }
 
 #tutorial {
@@ -71,15 +72,13 @@ footer {
   text-align: center; }
 
 .css-anchor {
+  margin-left: 5px;
   color: white;
   font-size: 10px;
   text-decoration: none;
   padding: 5px;
   background: #d34d1d;
   border-radius: 3px; }
-
-.right-float {
-  float: right; }
 
 .readme-anchor {
   text-decoration: none;

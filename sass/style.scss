@@ -91,6 +91,7 @@ div#content {
 }
 
 select {
+  display: none;
   background: $white;
 }
 
@@ -114,6 +115,7 @@ footer {
 }
 
 .css-anchor {
+  margin-left: 5px;
   color: $white;
   font-size: 10px;
   text-decoration: none;
@@ -122,9 +124,9 @@ footer {
   border-radius: 3px;
 }
 
-.right-float {
-  float: right;
-}
+// .right-float {
+//   float: right;
+// }
 
 .readme-anchor {
   text-decoration: none;
