@@ -41,10 +41,14 @@ header {
   text-transform: uppercase;
   padding: 10px;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   background: #d34d1d;
   margin-bottom: 30px;
-  transition: background 0.2s; }
+  -webkit-transition: background 0.2s;
+          transition: background 0.2s; }
   #download-btn:hover {
     background: #bb4419; }
 
@@ -62,7 +66,8 @@ div#content {
 .component {
   margin: 10px;
   font-size: 20px;
-  transition: all 0.2s; }
+  -webkit-transition: all 0.2s;
+          transition: all 0.2s; }
   .component:nth-child(1) {
     color: #d34d1d; }
 
@@ -104,3 +109,10 @@ footer {
   .readme-anchor:visited {
     text-decoration: none;
     color: #d34d1d; }
+
+.name-tag {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }

@@ -166,3 +166,8 @@ footer {
     color: $orange;
   }
 }
+
+.name-tag {
+  cursor: pointer;
+  user-select: none;
+}

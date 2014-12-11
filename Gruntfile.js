@@ -85,6 +85,13 @@ module.exports = function (grunt) {
       }
     },
 
+    autoprefixer: {
+      dist: {
+        src: 'css/style.css',
+        dest: 'css/style.css'
+      }
+    },
+
     'ftp-deploy': {
       dist: {
         auth: {
@@ -108,9 +115,10 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-ftp-deploy');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   grunt.registerTask('serve', ['connect', 'open', 'watch']);
-  grunt.registerTask('build', ['copy', 'cssmin', 'uglify', 'imagemin']);
+  grunt.registerTask('build', ['copy', 'autoprefixer', 'cssmin', 'uglify', 'imagemin']);
   grunt.registerTask('deploy', ['ftp-deploy']);
 
 };
