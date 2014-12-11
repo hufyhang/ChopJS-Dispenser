@@ -21,6 +21,30 @@ header {
     font-weight: bold;
     text-transform: uppercase;
   }
+
+  nav {
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    a {
+      text-decoration: none;
+      color: $white;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &:visited {
+        text-decoration: none;
+        color: $white;
+      }
+    }
+  }
+
 }
 
 #download-btn {
@@ -49,7 +73,7 @@ div#content {
   position: relative;
   min-height: 100%;
   width: 80%;
-  margin: 100px auto;
+  margin: 150px auto;
   margin-bottom: 0px;
 
 }

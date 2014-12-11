@@ -13,6 +13,21 @@ header {
     padding: 10px;
     font-weight: bold;
     text-transform: uppercase; }
+  header nav {
+    display: inline-block;
+    position: relative;
+    top: -15px;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase; }
+    header nav a {
+      text-decoration: none;
+      color: white; }
+      header nav a:hover {
+        text-decoration: none; }
+      header nav a:visited {
+        text-decoration: none;
+        color: white; }
 
 #download-btn {
   position: relative;
@@ -37,7 +52,7 @@ div#content {
   position: relative;
   min-height: 100%;
   width: 80%;
-  margin: 100px auto;
+  margin: 150px auto;
   margin-bottom: 0px; }
 
 #components {
