@@ -1,7 +1,7 @@
 $orange: #d34d1d;
 $darkOrange: #bb4419;
 $white: #fff;
-$grey: #bdb9ca;
+$grey: #e0e0e0;
 
 header {
   position: fixed;
@@ -61,11 +61,12 @@ header {
   cursor: pointer;
   user-select: none;
   background: $orange;
+  background-image: linear-gradient(to bottom, $orange, $darkOrange);
   margin-bottom: 30px;
   transition: background 0.2s;
 
   &:hover {
-    background: $darkOrange;
+    background: $orange;
   }
 }
 
@@ -79,6 +80,9 @@ div#content {
 }
 
 #components {
+  background: $grey;
+  border-radius: 6px;
+  padding: 20px;
   min-height: 100%;
   margin-bottom: 20px;
 }
@@ -170,4 +174,26 @@ footer {
 .name-tag {
   cursor: pointer;
   user-select: none;
+}
+
+#starter-btn {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 300px;
+  text-transform: uppercase;
+  background: $orange;
+  background-image: linear-gradient(to bottom, $orange, $darkOrange);
+  padding: 10px;
+  border-radius: 3px;
+  color: $white;
+  margin: 20px auto;
+  text-decoration: none;
+
+  transition: background 0.2s;
+
+  &:hover {
+    background: $orange;
+    text-decoration: none;
+  }
 }

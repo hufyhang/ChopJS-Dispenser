@@ -46,11 +46,13 @@ header {
       -ms-user-select: none;
           user-select: none;
   background: #d34d1d;
+  background-image: -webkit-linear-gradient(top, #d34d1d, #bb4419);
+  background-image: linear-gradient(to bottom, #d34d1d, #bb4419);
   margin-bottom: 30px;
   -webkit-transition: background 0.2s;
           transition: background 0.2s; }
   #download-btn:hover {
-    background: #bb4419; }
+    background: #d34d1d; }
 
 div#content {
   position: relative;
@@ -60,6 +62,9 @@ div#content {
   margin-bottom: 0px; }
 
 #components {
+  background: #e0e0e0;
+  border-radius: 6px;
+  padding: 20px;
   min-height: 100%;
   margin-bottom: 20px; }
 
@@ -116,3 +121,23 @@ footer {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
+
+#starter-btn {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 300px;
+  text-transform: uppercase;
+  background: #d34d1d;
+  background-image: -webkit-linear-gradient(top, #d34d1d, #bb4419);
+  background-image: linear-gradient(to bottom, #d34d1d, #bb4419);
+  padding: 10px;
+  border-radius: 3px;
+  color: white;
+  margin: 20px auto;
+  text-decoration: none;
+  -webkit-transition: background 0.2s;
+          transition: background 0.2s; }
+  #starter-btn:hover {
+    background: #d34d1d;
+    text-decoration: none; }
