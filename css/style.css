@@ -41,16 +41,11 @@ header {
   text-transform: uppercase;
   padding: 10px;
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   background: #d34d1d;
-  background-image: -webkit-linear-gradient(top, #d34d1d, #bb4419);
   background-image: linear-gradient(to bottom, #d34d1d, #bb4419);
   margin-bottom: 30px;
-  -webkit-transition: background 0.2s;
-          transition: background 0.2s; }
+  transition: background 0.2s; }
   #download-btn:hover {
     background: #d34d1d; }
 
@@ -71,8 +66,7 @@ div#content {
 .component {
   margin: 10px;
   font-size: 20px;
-  -webkit-transition: all 0.2s;
-          transition: all 0.2s; }
+  transition: all 0.2s; }
   .component:nth-child(1) {
     color: #d34d1d; }
 
@@ -117,10 +111,7 @@ footer {
 
 .name-tag {
   cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
+  user-select: none; }
 
 #starter-btn {
   position: relative;
@@ -129,15 +120,13 @@ footer {
   width: 300px;
   text-transform: uppercase;
   background: #d34d1d;
-  background-image: -webkit-linear-gradient(top, #d34d1d, #bb4419);
   background-image: linear-gradient(to bottom, #d34d1d, #bb4419);
   padding: 10px;
   border-radius: 3px;
   color: white;
   margin: 20px auto;
   text-decoration: none;
-  -webkit-transition: background 0.2s;
-          transition: background 0.2s; }
+  transition: background 0.2s; }
   #starter-btn:hover {
     background: #d34d1d;
     text-decoration: none; }

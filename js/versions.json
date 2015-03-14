@@ -92,7 +92,7 @@
   "name": "scope",
   "css": "",
   "attr": "",
-  "versions": ["0.2", "0.1"]
+  "versions": ["0.2.1", "0.2", "0.1"]
 }, {
   "name": "state",
   "css": "",
