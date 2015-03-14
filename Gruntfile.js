@@ -92,7 +92,7 @@ module.exports = function (grunt) {
       }
     },
 
-    'ftp-deploy': {
+    ftpush: {
       dist: {
         auth: {
           host: 'feifeihang.info',
@@ -114,11 +114,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-ftp-deploy');
+  grunt.loadNpmTasks('grunt-ftpush');
   grunt.loadNpmTasks('grunt-autoprefixer');
 
   grunt.registerTask('serve', ['connect', 'open', 'watch']);
   grunt.registerTask('build', ['copy', 'autoprefixer', 'cssmin', 'uglify', 'imagemin']);
-  grunt.registerTask('deploy', ['ftp-deploy']);
+  grunt.registerTask('deploy', ['ftpush']);
 
 };
